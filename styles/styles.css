@@ -1,0 +1,197 @@
+body {
+  user-select: none;
+  background: linear-gradient(30deg, rgba(32,32,32,1) 0%, rgba(29,29,29,1) 52%, rgba(40,40,40,1) 100%);
+  animation: gradient-animation 10s ease infinite;
+  background-size: 300% 300%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #FF4463 #131313;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+  backdrop-filter: blur(40px);
+  background-color: rgb(255, 68, 99, 0.4);
+  border-radius: 20px;
+  border: 3px solid #131313;
+}
+
+button {
+  white-space: nowrap;
+  font-weight: 700;
+  font-style: normal;
+  border: none;
+  outline: none;
+  letter-spacing: 0.02rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.main {
+  padding: 18px 40px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+button.outline {
+  padding: 13px 30px;
+  margin-top: -15px;
+  border-radius: 16px;
+  border: #FFFFFF 2px solid;
+  color: #FFFFFF;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+button.styled:hover {
+  box-shadow: rgba(134, 134, 134, 0.2) 0 0 30px 10px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.top-site {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.main-text-content {
+  padding: 15%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+}
+
+.text-description h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0;
+}
+
+.text-description h2 {
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: rgb(255, 255, 255, 0.6);
+  font-weight: 600;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.text-container {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  height: 55px;
+}
+
+.text-container .text {
+  color: white;
+  font-size: 50px;
+  overflow: hidden;
+  border-right: .15em solid rgb(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+.text-container .text {
+  overflow: hidden;
+  border-right: .15em solid rgb(255, 255, 255, 0.6);
+}
+
+.button-container {
+  display: flex;
+}
+
+.discord-btn,
+.vk-btn {
+  padding: 3px 20px;
+  border-radius: 8px;
+}
+
+/* For larger devices, display buttons in one row */
+@media (min-width: 746px) {
+  .button-container {
+    flex-direction: row; /* Single row */
+  }
+}
+
+/* For smaller devices, display buttons in two rows */
+@media (max-width: 745px) {
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+    width: 100%; /* Ensure full width for stacking */
+  }
+}
+
+@media (max-width: 575px) {
+  .text-container .text {
+    font-size: 30px; /* Small phones */
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .text-container .text {
+    font-size: 45px; /* Larger phones */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .text-container .text {
+    font-size: 45px; /* Tablets */
+  }
+}
+
+@media (min-width: 992px) {
+  .text-container .text {
+    font-size: 50px; /* Larger tablets and desktops */
+  }
+}
